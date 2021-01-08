@@ -1,0 +1,52 @@
+.profile {
+    width: 450px;
+    background-color: rgb(222, 216, 216);
+    box-shadow: 15px 15px 55px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.description {
+    text-align: center;
+    font-size: 28px;
+    width: 450px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.wrap {
+    border: 1px solid;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.name {
+    font-weight: bold;
+    margin-top: 5px;
+}
+p {
+    padding: 5px;
+}
+
+.stats {
+    display: flex;
+    /* justify-content: center; */
+    /* padding: 0; */
+}
+.list {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ccc;
+    /* padding: 20px; */
+    font-size: 30px;
+    height: 100px;
+}
+.quantity {
+    /* font-size: 20px; */
+    font-weight: bold;
+}

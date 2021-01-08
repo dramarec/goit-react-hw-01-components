@@ -1,0 +1,13 @@
+.transactionHistory {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    width: 650px;
+    font-size: 30px;
+    padding: 10px;
+}
+.thead {
+    background-color: aqua;
+}
+.table {
+    background-color: rgb(231, 228, 228);
+}
