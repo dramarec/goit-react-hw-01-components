@@ -1,10 +1,7 @@
 .statistics {
-    border: 1px solid #ccc;
-    margin-top: 20px;
     width: 450px;
     text-align: center;
     background-color: rgb(165, 195, 203);
-    /* padding: 5px; */
     font-size: 20px;
     box-shadow: 15px 15px 55px rgba(0, 0, 0, 0.1);
 }
@@ -16,13 +13,10 @@
     margin: 0;
     display: flex;
     justify-content: space-around;
-    /* border-top: 1px solid #ccc; */
 }
 .item {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
     background-color: rgb(168, 203, 165);
-
     padding: 10px 24px;
 }

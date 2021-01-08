@@ -10,21 +10,30 @@ import Friends from './friends-list/friend-list';
 import friends from './friends-list/friends.json';
 import transictions from './transaction-history/transactions.json';
 import TransactionHistory from './transaction-history/transiction-history';
+import Section from './Section';
 
 const App = () => {
     return (
-        <div>
-            <Profile
-                name={user.name}
-                tag={user.tag}
-                location={user.location}
-                avatar={user.avatar}
-                stats={user.stats}
-            />
-            <Statistics />
-            <Friends friends={friends} />
-            <TransactionHistory items={transictions} />
-        </div>
+        <>
+            <Section title="Social Profile">
+                <Profile
+                    name={user.name}
+                    tag={user.tag}
+                    location={user.location}
+                    avatar={user.avatar}
+                    stats={user.stats}
+                />
+            </Section>
+            <Section title="Statistics">
+                <Statistics />
+            </Section>
+            <Section title="Friend List">
+                <Friends friends={friends} />
+            </Section>
+            <Section title="Transaction History">
+                <TransactionHistory items={transictions} />
+            </Section>
+        </>
     );
 };
 

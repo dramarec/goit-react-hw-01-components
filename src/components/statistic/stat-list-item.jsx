@@ -2,11 +2,12 @@ import React from 'react';
 import styles from './statistics.module.css';
 
 const StatListItem = ({ stats }) => {
-    const elements = stats.map(item => {
+    // const { item, label, percentage, statList } = styles;
+    const elements = stats.map(({ id, label, percentage }) => {
         return (
-            <li key={item.id} className={styles.item}>
-                <span className={styles.label}>{item.label}</span>
-                <span className={styles.percentage}>{item.percentage}%</span>
+            <li key={id} className={styles.item}>
+                <span className={styles.label}>{label}</span>
+                <span className={styles.percentage}>{percentage}%</span>
             </li>
         );
     });

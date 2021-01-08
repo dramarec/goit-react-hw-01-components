@@ -1,13 +1,18 @@
 .transactionHistory {
-    border: 1px solid #ccc;
     margin-top: 10px;
-    width: 650px;
-    font-size: 30px;
+    width: 450px;
+    font-size: 20px;
     padding: 10px;
+    box-shadow: 1px 15px 55px rgba(0, 0, 0, 0.1);
 }
 .thead {
     background-color: aqua;
 }
 .table {
     background-color: rgb(231, 228, 228);
+}
+th,
+td {
+    padding: 12px;
+    text-align: center;
 }

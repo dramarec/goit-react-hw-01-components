@@ -1,13 +1,10 @@
 .friendList {
-    border: 1px solid rgb(248, 85, 85);
     width: 450px;
-    padding: 10px;
 }
 
 .item {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
     padding: 20px 40px;
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
     cursor: pointer;

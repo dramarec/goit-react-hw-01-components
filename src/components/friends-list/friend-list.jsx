@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Friends.module.css';
+import styles from './friends.module.css';
 
 const Friends = ({ friends }) => {
     const elements = friends.map(({ id, isOnline, avatar, name }) => {
@@ -12,11 +12,7 @@ const Friends = ({ friends }) => {
             </li>
         );
     });
-    return (
-        <div>
-            <ul className={styles.friendList}>{elements}</ul>
-        </div>
-    );
+    return <ul className={styles.friendList}>{elements}</ul>;
 };
 
 export default Friends;
