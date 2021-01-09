@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './profile.module.css';
+import PropTypes from 'prop-types';
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
     const { followers, views, likes } = stats;
@@ -34,6 +35,20 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
             </ul>
         </div>
     );
+};
+
+Profile.defaultProps = {
+    avatar:
+        'https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder',
+};
+Profile.propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
 };
 
 export default Profile;
