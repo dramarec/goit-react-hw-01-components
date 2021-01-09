@@ -4,6 +4,7 @@ import './style.css';
 import Profile from './social-profile/profile';
 import user from './social-profile/user.json';
 
+import statisicalData from './statistic/statistical-data.json';
 import Statistics from './statistic/statistics';
 
 import Friends from './friends-list/friend-list';
@@ -25,7 +26,7 @@ const App = () => {
                 />
             </Section>
             <Section title="Statistics">
-                <Statistics />
+                <Statistics stats={statisicalData} />
             </Section>
             <Section title="Friend List">
                 <Friends friends={friends} />

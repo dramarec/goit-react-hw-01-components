@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './friends.module.css';
+import PropTypes from 'prop-types';
 
 const Friends = ({ friends }) => {
     const elements = friends.map(({ id, isOnline, avatar, name }) => {
@@ -13,6 +14,10 @@ const Friends = ({ friends }) => {
         );
     });
     return <ul className={styles.friendList}>{elements}</ul>;
+};
+
+Friends.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Friends;
