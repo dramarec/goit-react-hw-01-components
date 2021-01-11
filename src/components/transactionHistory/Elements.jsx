@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './transaction.module.css';
+import styles from './Transaction.module.css';
 import Type from './Type';
 import PropTypes from 'prop-types';
 
@@ -13,6 +13,6 @@ const Elements = ({ items }) => {
     );
 };
 Elements.propTypes = {
-    items: PropTypes.object,
+    items: PropTypes.object.isRequired,
 };
 export default Elements;

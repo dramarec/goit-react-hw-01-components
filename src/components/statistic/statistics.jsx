@@ -1,22 +1,23 @@
 import React from 'react';
-import styles from './statistics.module.css';
+import styles from './Statistics.module.css';
 import StatListItem from './StatListItem';
 import PropTypes from 'prop-types';
 
-const Statistics = props => {
-    const { statistics, title, statList } = styles;
+const Statistics = ({ stats, title }) => {
     return (
-        <div className={statistics}>
-            <h2 className={title}>Upload stats</h2>{' '}
-            <ul className={statList}>
-                {props.stats.map(prop => {
-                    return <StatListItem key={prop.id} stats={prop} />;
-                })}
+        <div className={styles.statistics}>
+            {title && <h2 className={styles.title}>{title}</h2>}
+
+            <ul className={styles.statList}>
+                {stats.map(stat => (
+                    <StatListItem key={stat.id} props={stat} />
+                ))}
             </ul>
         </div>
     );
 };
 Statistics.propTypes = {
-    props: PropTypes.array,
+    stats: PropTypes.array.isRequired,
+    title: PropTypes.string,
 };
 export default Statistics;

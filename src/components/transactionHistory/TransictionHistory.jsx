@@ -1,6 +1,6 @@
 import React from 'react';
 import Elements from './Elements';
-import styles from './transaction.module.css';
+import styles from './Transaction.module.css';
 import PropTypes from 'prop-types';
 
 const TransactionHistory = props => {
@@ -24,7 +24,8 @@ const TransactionHistory = props => {
     );
 };
 TransactionHistory.propTypes = {
-    props: PropTypes.array,
+    // здесь не получается сделать .isRequired!
+    props: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default TransactionHistory;

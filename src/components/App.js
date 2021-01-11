@@ -1,39 +1,37 @@
 import React from 'react';
-import './style.css';
 
-import Profile from './social-profile/profile';
-import user from './social-profile/user.json';
-
-import statisicalData from './statistic/statistical-data.json';
-import Statistics from './statistic/statistics';
-
-import Friends from './friends-list/friend-list';
-import friends from './friends-list/friends.json';
-import transictions from './transaction-history/transactions.json';
-import TransactionHistory from './transaction-history/transiction-history';
-import Section from './Section';
+import Profile from './socialProfile/Profile';
+import Statistics from './statistic/Statistics';
+import Friends from './friendsList/FriendList';
+import TransactionHistory from './transactionHistory/TransictionHistory';
+import Section from './section/Section';
+import Header from './header/Header';
+import Main from './main/Main';
+import data from '../data';
 
 const App = () => {
     return (
         <>
-            <Section title="Social Profile">
-                <Profile
-                    name={user.name}
-                    tag={user.tag}
-                    location={user.location}
-                    avatar={user.avatar}
-                    stats={user.stats}
-                />
-            </Section>
-            <Section title="Statistics">
-                <Statistics stats={statisicalData} />
-            </Section>
-            <Section title="Friend List">
-                <Friends friends={friends} />
-            </Section>
-            <Section title="Transaction History">
-                <TransactionHistory items={transictions} />
-            </Section>
+            <Header title="Home Work #1" />
+            <Main>
+                <Section title="Social Profile">
+                    <Profile {...data.user} />
+                </Section>
+                <Section title="Statistics">
+                    <Statistics stats={data.statisticalData} />
+
+                    <Statistics
+                        title="Upload stats"
+                        stats={data.statisticalData}
+                    />
+                </Section>
+                <Section title="Friend List">
+                    <Friends friends={data.friends} />
+                </Section>
+                <Section title="Transaction History">
+                    <TransactionHistory items={data.transictions} />
+                </Section>
+            </Main>
         </>
     );
 };
