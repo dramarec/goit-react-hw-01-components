@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = props => {
+// const Header = styled.head`
+//     header {
+//         color: #ccc;
+//     }
+// `;
+
+const Header = ({ title }) => {
     const styles = {
         textAlign: 'center',
+        color: 'red',
     };
 
     return (
         <header style={styles}>
-            <h1>{props.title}</h1>
+            <h1>{title}</h1>
         </header>
     );
 };
@@ -16,6 +23,5 @@ const Header = props => {
 export default Header;
 
 Header.propTypes = {
-    // здесь не получается сделать .isRequired!
-    props: PropTypes.string,
+    title: PropTypes.string.isRequired,
 };

@@ -3,7 +3,7 @@ import Elements from './Elements';
 import styles from './Transaction.module.css';
 import PropTypes from 'prop-types';
 
-const TransactionHistory = props => {
+const TransactionHistory = ({ items }) => {
     return (
         <div>
             <table className={styles.transactionHistory}>
@@ -15,7 +15,7 @@ const TransactionHistory = props => {
                     </tr>
                 </thead>
                 <tbody className={styles.tbody}>
-                    {props.items.map(prop => {
+                    {items.map(prop => {
                         return <Elements key={prop.id} items={prop} />;
                     })}
                 </tbody>
@@ -24,8 +24,7 @@ const TransactionHistory = props => {
     );
 };
 TransactionHistory.propTypes = {
-    // здесь не получается сделать .isRequired!
-    props: PropTypes.arrayOf(PropTypes.object),
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default TransactionHistory;
